@@ -4,7 +4,7 @@ This directory contains the code snippets implementing the coding challenge from
 
   download the code base, and put the files in the following structure:
   
-    src/fizznuzz/*
+    src/fizzbuzz/*
 
 
 **Run:**
@@ -12,8 +12,12 @@ This directory contains the code snippets implementing the coding challenge from
     $ cd src/; 
     $ groovy fizzbuzz/FizzBuzz.groovy;
 ```
-    It will print out the numbers for both stage 1 and stage 2. Since it is a long list, be sure to scroll up to find
-    proper section for the two stages.
+    It will print out the numbers for stage 1.
+    
+```
+    $ groovy fizzbuzz/FizzBuzz2.groovy;
+```
+    It will print out the numbers for stage 2.
 
 **Run the test:**    
 ```

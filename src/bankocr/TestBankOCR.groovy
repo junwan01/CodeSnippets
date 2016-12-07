@@ -14,7 +14,7 @@ class TestBankOCR extends GroovyTestCase  {
                                                 "666666666","777777777","888888888","999999999"]];
 
         cases.each { file, expect ->
-            assertEquals(BankOCR.parseFile(file), expect);
+            assertEquals(BankOCR.parseFile(new File(file)), expect);
         }
     }
 

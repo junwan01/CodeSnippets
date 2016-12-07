@@ -1,13 +1,19 @@
 package fizzbuzz;
 
-import fizzbuzz.FizzBuzz
+import fizzbuzz.FizzBuzz;
+import fizzbuzz.FizzBuzz2;
 
 /**
- * Test FizzBuzz
+ * Test FizzBuzz and FizzBuzz2
  * Created by junwan on 11/10/16.
  */
 class TestFizzBuzz extends GroovyTestCase {
-    void testPrintIt() {
+
+    /**
+     * test fizzbuzz (stage 1)
+     */
+    void testFizzBuzz() {
+        // input : expected output
         def cases = [ '1'  : '1',
                       '2'  : '2',
                       '3'  : 'Fizz',
@@ -17,12 +23,17 @@ class TestFizzBuzz extends GroovyTestCase {
                       '15' : 'FizzBuzz',
                       '30' : 'FizzBuzz'
                     ];
+        FizzBuzz fb = new FizzBuzz();
         cases.each { i , expect ->
-            assertEquals(FizzBuzz.printIt(i.toInteger()), expect);
+            assertEquals(fb.convert(i.toInteger()), expect);
         }
     }
 
-    void testPrintIt2() {
+    /**
+     * test fizzbuzz2 (stage 2)
+     */
+    void testFizzBuzz2() {
+        // input : expected output
         def cases = [ '1'  : '1',
                       '2'  : '2',
                       '3'  : 'Fizz', // divisible
@@ -38,8 +49,9 @@ class TestFizzBuzz extends GroovyTestCase {
                       '53' : 'FizzBuzz', // contain 3 and 5,
                       '30' : 'FizzBuzz' // contain 3 and divisible by 5
                     ];
+        FizzBuzz fb = new FizzBuzz2();
         cases.each { i , expect ->
-            assertEquals(FizzBuzz.printIt2(i.toInteger()), expect);
+            assertEquals(fb.convert(i.toInteger()), expect);
         }
     }
 
